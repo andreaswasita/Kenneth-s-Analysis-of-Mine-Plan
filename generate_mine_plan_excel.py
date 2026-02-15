@@ -24,8 +24,9 @@ full_years   = [2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040, 2042, 2044, 2046
 # Strip ratios are annotated directly on the chart
 strip_ratios = [3.2, 3.1, 4.3, 5.8, 11.5, 5.0, 4.5, 5.5, 3.4, 1.9, 1.4, 0.8]
 
-# Total movement read from the chart (y-axis 0-80 Mt)
-total_movement = [42.0, 41.0, 47.7, 57.8, 68.8, 48.0, 49.5, 45.5, 30.8, 17.4, 12.0, 7.9]
+# Total movement re-read from chart against y-axis gridlines (0, 20, 40, 60, 80 Mt)
+# 2026=42, 2028=42, 2030=50, 2032=60, 2034=75(peak), 2036=50, 2038=55, 2040=45, 2042=31, 2044=18, 2046=12, 2048=8
+total_movement = [42.0, 42.0, 50.0, 60.0, 75.0, 50.0, 55.0, 45.0, 31.0, 18.0, 12.0, 8.0]
 
 # Ore and Waste calculated from: Total = Ore * (1 + Strip Ratio)
 ore_mt  = [round(t / (1 + sr), 1) for t, sr in zip(total_movement, strip_ratios)]
